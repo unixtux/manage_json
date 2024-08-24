@@ -77,14 +77,14 @@ class JsonManager:
 
     def get(self, chat_id: int, /) -> dict[str, Any]:
         '''
-        Method to :meth:`~myfunx.JsonManager.get` a dict from the
+        Method to :meth:`~ujson_manager.JsonManager.get` a dict from the
         ``chat_id.json`` file or from the ``self.updates``.
 
         Usage:
 
         .. code-block:: python3
 
-            from myfunx import JsonManager
+            from ujson_manager import JsonManager
             tracker = JsonManager('<your_usr_dir>', base_dict=None)
             data = tracker.get(0123456789)
 
@@ -121,13 +121,13 @@ class JsonManager:
         '''
         Useful for the :obj:`~aiotgm.Client`, to ensure
         that the json ``keys`` are *ok* in a ``json file``
-        before to call the :meth:`~myfunx.JsonManager.get`.
+        before to call the :meth:`~ujson_manager.JsonManager.get`.
 
         Usage:
 
         .. code-block:: python3
 
-            from myfunx import JsonManager
+            from ujson_manager import JsonManager
             tracker = JsonManager('<your_usr_dir>', base_dict=None)
             data = tracker.check(0123456789)
 
@@ -163,13 +163,13 @@ class JsonManager:
     def merge(self) -> dict[int, dict[str, Any]]:
         '''
         Useful for the :obj:`~aiotgm.Client` to merge all the ``json files`` in the
-        :obj:`~JsonManager.updates` dict, ``non-integer`` pattern filenames will be skipped.
+        :obj:`~ujson_manager.JsonManager.updates` dict, ``non-integer`` pattern filenames will be skipped.
 
         Usage:
 
         .. code-block:: python3
 
-            from myfunx import JsonManager
+            from ujson_manager import JsonManager
             tracker = JsonManager('<your_usr_dir>', base_dict=None)
             users = tracker.merge()
 
@@ -191,8 +191,8 @@ class JsonManager:
     def push_updates(self) -> int:
         '''
         You need to call this method ``explicitly``, to write
-        the :obj:`~myfunx.json_manager.JsonManager.updates` to the
-        ``json files``. Used in the method :meth:`~myfunx.JsonManager.process_updates`.
+        the :obj:`~ujson_manager.JsonManager.updates` to the
+        ``json files``. Used in the method :meth:`~ujson_manager.JsonManager.process_updates`.
 
         :rtype: :obj:`int`
         '''
@@ -211,7 +211,7 @@ class JsonManager:
 
     async def process_updates(self, delay: float = 15, /) -> None:
         '''
-        Coroutine to ``process`` the :obj:`~myfunx.JsonManager.updates`
+        Coroutine to ``process`` the :obj:`~ujson_manager.JsonManager.updates`
         and ``write`` them to the ``json files`` every *delay* time.
 
         Usage:
@@ -219,7 +219,7 @@ class JsonManager:
         .. code-block:: python3
 
             import asyncio
-            from myfunx import JsonManager
+            from ujson_manager import JsonManager
             tracker = JsonManager('<your_usr_dir>', base_dict=None)
 
             asyncio.run(tracker.process_updates(30))

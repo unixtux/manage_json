@@ -1,10 +1,9 @@
-**myfunx**
-==========
+**ujson_manager**
+=================
 
 .. toctree::
    installation
-   client
-   json_manager
+   ujson_manager
    :maxdepth: 3
    :caption: Contents:
 
