@@ -29,8 +29,7 @@ class JsonManager:
     def __init__(
         self,
         main_dir: Optional[str],
-        *,
-        base_dict: dict[str, Any] = {},
+        base_dict: dict[str, Any],
         debug: Optional[bool] = None
     ):
         if not isinstance(main_dir, (str, type(None))):
