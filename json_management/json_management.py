@@ -75,22 +75,7 @@ class JsonManager:
 
 
     def get(self, chat_id: int, /) -> dict[str, Any]:
-        '''
-        Method to :meth:`~ujson_manager.JsonManager.get` a dict from the
-        ``chat_id.json`` file or from the ``self.updates``.
 
-        Usage:
-
-        .. code-block:: python3
-
-            from ujson_manager import JsonManager
-            tracker = JsonManager('<your_usr_dir>', base_dict=None)
-            data = tracker.get(0123456789)
-
-        :param chat_id: A `Telegram <https://core.telegram.org/bots/api>`_ chat_id.
-        :type chat_id: :obj:`int`
-        :rtype: :obj:`dict[str, Any]`
-        '''
         if type(chat_id) is not int:
             raise TypeError(
                 "'chat_id' must be int in JsonManager.get()"
@@ -117,23 +102,7 @@ class JsonManager:
 
 
     def check(self, chat_id: int, /) -> dict[str, Any]:
-        '''
-        Useful for the :obj:`~aiotgm.Client`, to ensure
-        that the json ``keys`` are *ok* in a ``json file``
-        before to call the :meth:`~ujson_manager.JsonManager.get`.
 
-        Usage:
-
-        .. code-block:: python3
-
-            from ujson_manager import JsonManager
-            tracker = JsonManager('<your_usr_dir>', base_dict=None)
-            data = tracker.check(0123456789)
-
-        :param chat_id: A `Telegram <https://core.telegram.org/bots/api>`_ chat_id.
-        :type chat_id: :obj:`int`
-        :rtype: :obj:`dict[str, Any]`
-        '''
         file_name = _json_format(chat_id)
 
         if (
@@ -160,20 +129,7 @@ class JsonManager:
 
 
     def merge(self) -> dict[int, dict[str, Any]]:
-        '''
-        Useful for the :obj:`~aiotgm.Client` to merge all the ``json files`` in the
-        :obj:`~ujson_manager.JsonManager.updates` dict, ``non-integer`` pattern filenames will be skipped.
 
-        Usage:
-
-        .. code-block:: python3
-
-            from ujson_manager import JsonManager
-            tracker = JsonManager('<your_usr_dir>', base_dict=None)
-            users = tracker.merge()
-
-        :rtype: :obj:`dict[int, dict[str, Any]]`
-        '''
         for file_name in os.listdir(self.main_dir):
 
             if re.match(r'^(\-|\d){0,1}\d+\.json$', file_name):
@@ -188,13 +144,7 @@ class JsonManager:
 
 
     def push_updates(self) -> int:
-        '''
-        You need to call this method ``explicitly``, to write
-        the :obj:`~ujson_manager.JsonManager.updates` to the
-        ``json files``. Used in the method :meth:`~ujson_manager.JsonManager.process_updates`.
 
-        :rtype: :obj:`int`
-        '''
         ok = 0
         for chat_id in self.updates:
             file_name = _json_format(chat_id)
@@ -209,24 +159,6 @@ class JsonManager:
 
 
     async def process_updates(self, delay: float = 15, /) -> None:
-        '''
-        Coroutine to ``process`` the :obj:`~ujson_manager.JsonManager.updates`
-        and ``write`` them to the ``json files`` every *delay* time.
-
-        Usage:
-
-        .. code-block:: python3
-
-            import asyncio
-            from ujson_manager import JsonManager
-            tracker = JsonManager('<your_usr_dir>', base_dict=None)
-
-            asyncio.run(tracker.process_updates(30))
-
-        :param delay: A time in seconds how often to write the ``json files``.
-        :type delay: :obj:`float`
-        :rtype: :obj:`None`
-        '''
         try:
             while True:
                 if self.updates:
