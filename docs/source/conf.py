@@ -10,13 +10,13 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../../'))
 
-import ujson_manager
+import json_management
 from datetime import datetime as dtm
 
 author = 'unixtux'
 year = dtm.now().year
-release = ujson_manager.VERSION
-project = ujson_manager.__name__
+release = json_management.VERSION
+project = json_management.__name__
 copyright = f'{year}, {author}'
 
 # -- General configuration ---------------------------------------------------

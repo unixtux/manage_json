@@ -1,9 +1,9 @@
-**ujson_manager**
-=================
+**json_management**
+===================
 
 .. toctree::
    installation
-   ujson_manager
+   json_management
    :maxdepth: 3
    :caption: Contents:
 

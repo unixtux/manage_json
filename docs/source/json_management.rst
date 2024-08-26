@@ -1,6 +1,6 @@
 JsonManager
 ===========
 
-.. autoclass:: ujson_manager.JsonManager
+.. autoclass:: json_management.JsonManager
     :members:
     :undoc-members:

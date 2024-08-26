@@ -11,14 +11,14 @@ Dependencies
 Installation
 ------------
 
-Install the module using `pip <https://pypi.org/project/ujson_manager/>`_ from your shell.
+Install the module using `pip <https://pypi.org/project/json-management/>`_ from your shell.
 
 .. code-block:: bash
 
-    $ pip install ujson_manager
+    $ pip install json-management
 
 Update the module regurarly with the following command.
 
 .. code-block:: bash
 
-    $ pip install -U ujson_manager
+    $ pip install -U json-management
