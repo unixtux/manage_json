@@ -6,7 +6,7 @@ __version__ = '0.0.1'
 VERSION = __version__
 
 from aiotgm.logging import get_logger
-logger = get_logger('ujson_manager ' + VERSION)
+logger = get_logger('json_management ' + VERSION)
 del get_logger
 
 from .json_management import JsonManager
