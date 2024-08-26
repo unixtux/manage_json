@@ -15,10 +15,10 @@ Install the module using `pip <https://pypi.org/project/json-management/>`_ from
 
 .. code-block:: bash
 
-    $ pip install json-management
+    $ pip install json_management
 
 Update the module regurarly with the following command.
 
 .. code-block:: bash
 
-    $ pip install -U json-management
+    $ pip install -U json_management
