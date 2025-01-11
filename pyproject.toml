@@ -3,20 +3,20 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "json_management"
-version = "0.0.3"
+name = "manage-json"
+version = "0.0.5"
 requires-python = ">= 3.8"
 license = {file = "LICENSE"}
 readme = "README.md"
 authors = [
-    {name = "unixtux"}
+    {name = "geko1"}
 ]
 dependencies = [
-    "aiotgm"
+    "pro-telegram"
 ]
 
 [project.urls]
-Repository = "https://github.com/unixtux/json_management"
+Repository = "https://github.com/unixtux/manage-json"
 
 [tool.setuptools]
-packages = ["json_management"]
+packages = ["manage-json"]
