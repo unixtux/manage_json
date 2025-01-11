@@ -1,5 +1,5 @@
-**json_management**
-===================
+**manage_json**
+===============
 
 .. toctree::
    installation

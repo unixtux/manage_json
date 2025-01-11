@@ -6,19 +6,19 @@ Dependencies
 ------------
 
 * Python >= 3.8
-* `aiotgm <https://aiotgm.readthedocs.io>`_
+* `pro_telegram <https://pro_telegram.readthedocs.io>`_
 
 Installation
 ------------
 
-Install the module using `pip <https://pypi.org/project/json-management/>`_ from your shell.
+Install the module using `pip <https://pypi.org/project/manage_json/>`_ from your shell.
 
 .. code-block:: bash
 
-    $ pip install json_management
+    $ pip install manage_json
 
 Update the module regurarly with the following command.
 
 .. code-block:: bash
 
-    $ pip install -U json_management
+    $ pip install -U manage_json
