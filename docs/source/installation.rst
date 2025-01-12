@@ -6,7 +6,7 @@ Dependencies
 ------------
 
 * Python >= 3.8
-* `pro_telegram <https://pro_telegram.readthedocs.io>`_
+* `apitele <https://apitele.readthedocs.io>`_
 
 Installation
 ------------
