@@ -2,10 +2,10 @@
 
 __all__ = ('JsonManager',)
 
-__version__ = '0.0.3'
+__version__ = '0.0.6'
 VERSION = __version__
 
-from pro_telegram.logging import get_logger
+from apitele.logging import get_logger
 logger = get_logger('json_management ' + VERSION)
 del get_logger
 

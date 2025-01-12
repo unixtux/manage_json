@@ -2,5 +2,5 @@
 
 
 ```powershell
-pip install -U json-management
+pip install -U manage_json
 ```
