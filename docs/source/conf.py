@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 import manage_json
 from datetime import datetime as dtm
 
-author = 'unixtux'
+author = 'geko1'
 year = dtm.now().year
 release = manage_json.VERSION
 project = manage_json.__name__
@@ -42,5 +42,5 @@ html_static_path = ['_static']
 html_theme_options = {
     'light_logo': 'tux.png',
     'dark_logo': 'tux.png',
-    'navigation_with_keys': True
+    #'navigation_with_keys': True
 }
