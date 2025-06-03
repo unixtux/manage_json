@@ -2,7 +2,7 @@
 
 __all__ = ('JsonManager',)
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 VERSION = __version__
 
 from apitele.logging import get_logger

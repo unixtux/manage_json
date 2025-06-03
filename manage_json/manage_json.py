@@ -22,7 +22,7 @@ class JsonManager:
     :param main_dir: The main directory to write ``json files``.
     :type main_dir: :obj:`str` or :obj:`None`
     :param base_dict: The base dict for ``json files``.
-    :type base_dict: :obj:`dict` or :obj:`None`
+    :type base_dict: :obj:`dict`
     :param debug: Pass :obj:`True` to see more information in ``STDOUT``.
     :type debug: :obj:`bool`, optional
     '''
